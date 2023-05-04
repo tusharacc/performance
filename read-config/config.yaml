@@ -1,0 +1,12 @@
+environment: SIT
+monitor:
+  - service
+  - process
+  - apppool
+
+metadata:
+  - items:
+    item: appool
+    names:
+      - AppPool1
+      - AppPool2
