@@ -4,13 +4,14 @@ use serde_yaml::{self};
 
 #[derive(Debug,Serialize,Deserialize)]
 struct Detail {
-    type_: String,
+    item: String,
     names: Vec<String>
 }
 
 #[derive(Debug,Serialize,Deserialize)]
 struct Metadata {
-    values: Vec<Detail>,
+    item: String,
+    names: Vec<String>
 }
 
 #[derive(Debug,Serialize,Deserialize)]

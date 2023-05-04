@@ -5,8 +5,7 @@ monitor:
   - apppool
 
 metadata:
-  - items:
-    item: appool
+  - item: apppool
     names:
       - AppPool1
       - AppPool2
