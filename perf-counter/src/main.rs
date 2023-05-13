@@ -6,9 +6,13 @@ fn main() {
         PdhOpenQueryW(None, 0, &mut query);
 
         let mut counter = 0;
+        //let query_Str = r#"\\Processor(0)\\% Processor Time"#;
+        let counter_path = "Processor(_Total)\\% Processor Time" + '\0';
+        //let counter_path = counter_path.encode_utf16().collect::<Vec<u16>>();
+
         PdhAddCounterW(
             query,
-            w!("\\Processor(0)\\% Processor Time"),
+            w!(counter_path),
             0,
             &mut counter,
         );
